@@ -1,6 +1,6 @@
 class Stack:
-    def __init__(self, stack=list()):
-        self._stack = stack
+    def __init__(self):
+        self._stack = list()
 
     def isEmpty(self):
         return len(self._stack) == 0

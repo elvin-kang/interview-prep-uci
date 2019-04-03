@@ -6,10 +6,6 @@ class StackTest(unittest.TestCase):
         s = Stack()
         self.assertEqual(len(s), 0)
 
-    def test_len(self):
-        s = Stack([1, 2, 3])
-        self.assertEqual(len(s), 3)
-
     def test_push(self):
         s = Stack()
         s.push(3)
