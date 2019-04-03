@@ -1,5 +1,6 @@
 class Stack:
     def __init__(self):
+        # disallow construction from a list to prevent data reservation
         self._stack = list()
 
     def isEmpty(self):
