@@ -37,7 +37,7 @@ def print(atree, indent_char='.', indent_delta=2):
             print_tree(indent + indent_delta, atree.left)
     print_tree(0, atree)
 
-def serach(atree, val):
+def search(atree, val):
     if atree == None:
         return None
     if val == atree.val:
