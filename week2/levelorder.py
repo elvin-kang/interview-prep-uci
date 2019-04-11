@@ -18,5 +18,5 @@ if __name__ == '__main__':
     root = list_to_tree(tree)
     print_BST(root)
     s = Solution()
-    print(s.print_level(root))
+    s.print_level(root)
     # Should print out: 1 3 2 4 5 6 7
