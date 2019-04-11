@@ -55,6 +55,9 @@ class PriorityQueue:
     def __len__(self):
         return len(self._heap)
 
+    def __str__(self):
+        return str(self._heap)
+
     def toArray(self):
         return self._heap
 
@@ -86,3 +89,17 @@ class PriorityQueue:
 
             leftChildIndex = 2 * i + 1
             rightChildIndex = 2 * i + 2
+
+
+if __name__ == '__main__':
+    pq = PriorityQueue()
+    pq.add(5)
+    pq.add(3)
+    pq.add(4)
+    pq.add(1)
+    print(pq.peek())
+    print(pq)
+    print(pq.poll())
+    print(pq)
+    print(pq.poll())
+    print(pq)

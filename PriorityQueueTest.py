@@ -7,30 +7,35 @@ class PriorityQueueTest(unittest.TestCase):
         self.assertEqual(len(pq), 0)
 
     def test_len(self):
-        q = Queue()
-        q.add(1)
-        q.add(2)
-        q.add(3)
-        self.assertEqual(len(q), 3)
-        self.assertFalse(q.isEmpty())
+        pq = PriorityQueue()
+        pq.add(1)
+        pq.add(2)
+        pq.add(3)
+        print(pq)
+        self.assertEqual(len(pq), 3)
+        
+        pq.clear()
 
     def test_add(self):
-        q = Queue()
-        q.add(3)
-        q.add(5)
-        self.assertEqual(q.poll(), 3)
-        self.assertEqual(q.poll(), 5)
+        pq = PriorityQueue()
+        pq.add(3)
+        pq.add(1)
+        pq.add(5)
+        self.assertEqual(pq._heap, [1, 3, 5])
+        pq.clear()
+        self.assertEqual(len(pq), 0)
 
     def test_peek(self):
-        q = Queue()
-        q.add(1)
-        q.add(2)
-        self.assertEqual(q.peek(), 1)
-        self.assertEqual(q.poll(), 1)
-        self.assertEqual(q.poll(), 2)
-        self.assertEqual(len(q), 0)
+        pq = PriorityQueue()
+        pq.add(1)
+        pq.add(2)
+        self.assertEqual(pq.peek(), 1)
+        self.assertEqual(pq.poll(), 1)
+        self.assertEqual(pq.poll(), 2)
+        self.assertEqual(len(pq), 0)
+        pq.clear()
         with self.assertRaises(IndexError):
-            q.remove()
+            pq.remove()
 
 if __name__ == '__main__':
     t = unittest.TestLoader().loadTestsFromTestCase(PriorityQueueTest)

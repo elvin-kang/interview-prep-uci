@@ -1,4 +1,4 @@
-from TreeNode import TreeNode
+from .TreeNode import TreeNode
 
 # *** Not a self balancing tree ***
 
@@ -26,7 +26,7 @@ def tree_to_list(atree):
     else:
         return [atree.val, tree_to_list(atree.left), tree_to_list(atree.right)]
 
-def print(atree, indent_char='.', indent_delta=2):
+def print_BST(atree, indent_char='.', indent_delta=2):
     def print_tree(indent, atree):
         if atree == None:
             return None

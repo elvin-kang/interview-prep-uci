@@ -1,4 +1,4 @@
-from ListNode import ListNode
+from .ListNode import ListNode
 
 # Some functions are assuming that
 # list only contains numeric values
