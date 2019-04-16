@@ -5,7 +5,7 @@ current_dir = path.dirname(path.abspath(getsourcefile(lambda:0)))
 sys.path.insert(0, current_dir[:current_dir.rfind(path.sep)])
 
 class Solution:
-    def mergesort(self, arr, begin, end):
+    def mergesort(self, arr: list , begin: int, end: int) -> list:
         if len(arr) == 0 or begin > end:
             return list()
         
@@ -17,7 +17,7 @@ class Solution:
 
         return self.merge(left, right)
 
-    def merge(self, l1, l2):
+    def merge(self, l1: list, l2: list):
         len1 = len(l1)
         len2 = len(l2)
         res = list()

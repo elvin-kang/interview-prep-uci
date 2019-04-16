@@ -9,10 +9,10 @@ import random, time
 # Our search algorithms returns index of the target element.
 # If target not found, return -1
 class Solution:
-    def binarysearch(self, arr, target):
+    def binarysearch(self, arr: list, target: int) -> int:
         pass
 
-    def sequentialsearch(self, arr, target):
+    def sequentialsearch(self, arr: list, target: int) ->int:
         pass
 
 

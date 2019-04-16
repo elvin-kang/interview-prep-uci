@@ -5,16 +5,16 @@ current_dir = path.dirname(path.abspath(getsourcefile(lambda:0)))
 sys.path.insert(0, current_dir[:current_dir.rfind(path.sep)])
 
 class Solution:
-    def mergesort(self, arr, begin, end):
+    def mergesort(self, arr: list, begin: int, end: int) -> list:
         return arr # erase this line
 
-def is_sorted(arr):
+def is_sorted(arr: list) -> bool:
     n = len(arr)
     for i in range(n-1):
         if arr[i] > arr[i+1]:
             return False
     return True
-
+    
 
 if __name__ == '__main__':
     s = Solution()

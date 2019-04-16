@@ -10,7 +10,7 @@ import time
 # Our search algorithms returns index of the target element.
 # If target not found, return -1
 class Solution:
-    def binarysearch(self, arr, target):
+    def binarysearch(self, arr: list, target: int) -> int:
         left = 0
         right = len(arr)
         while left <= right:
@@ -24,7 +24,7 @@ class Solution:
         return -1
 
     
-    def sequentialsearch(self, arr, target):
+    def sequentialsearch(self, arr: list, target: int) -> int:
         n = len(arr)
         for i in range(n):
             if arr[i] == target:
@@ -48,4 +48,4 @@ if __name__ == '__main__':
     bin_time = t3-t2
     print("Binary Search took:", bin_time, "seconds.")
     print()
-    print("Binary Search with 1000000 sorted elements is", seq_time/bin_time, "times faster")
+    print("Binary Search with 1,000,000 sorted elements is", seq_time/bin_time, "times faster")

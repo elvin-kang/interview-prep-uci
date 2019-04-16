@@ -5,7 +5,7 @@ current_dir = path.dirname(path.abspath(getsourcefile(lambda:0)))
 sys.path.insert(0, current_dir[:current_dir.rfind(path.sep)])
 
 class Solution:
-    def merge(self, l1, l2):
+    def merge(self, l1: list, l2: list) -> list:
         pass
 
 if __name__ == '__main__':
