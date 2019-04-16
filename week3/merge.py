@@ -11,3 +11,5 @@ class Solution:
 if __name__ == '__main__':
     s = Solution()
     print(s.merge([1, 5, 6, 9, 11], [2, 3, 7, 8, 18, 21]))
+
+    # make your own test cases
