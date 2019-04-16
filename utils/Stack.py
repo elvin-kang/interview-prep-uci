@@ -28,5 +28,3 @@ class Stack:
     def toList(self):
         return self._stack
         
-
-    
