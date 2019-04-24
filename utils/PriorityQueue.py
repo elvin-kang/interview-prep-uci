@@ -3,7 +3,8 @@ class PriorityQueue:
         self._heap = arr
         self.heapify(self._heap, len(self._heap))
 
-    def heapify(self, arr, n, i=0):
+    def heapify(self, arr: list, n: int, i: int=0):
+        """Heapifies given array arr, length n, and index i."""
         smallest = i
         l = 2 * i + 1
         r = 2 * i + 2
@@ -19,7 +20,7 @@ class PriorityQueue:
             arr[i], arr[smallest] = arr[smallest], arr[i]
             self.heapify(arr, n, smallest) # heapify
 
-    def add(self, e):
+    def add(self, e: "element"):
         """Inserts e into this priority queue"""
         self._heap.append(e)
         self._bubble_up()
@@ -28,7 +29,7 @@ class PriorityQueue:
         """Removes all elements from this priority queue"""
         self._heap = []
 
-    def contains(self, o):
+    def contains(self, o: "object"):
         """Retruns true if this queue contains o"""
         return o in self._heap
 
@@ -43,6 +44,8 @@ class PriorityQueue:
            return None if queue is empty"""
         if not self._heap:
             return None
+        if len(self._heap) == 1:
+            return self._heap.pop()
         head = self._heap[0]
         self._heap[0] = self._heap.pop()
         self._bubble_down()
@@ -51,6 +54,9 @@ class PriorityQueue:
     def size(self):
         """returns the number of elements in this collection"""
         return len(self._heap)
+
+    def isEmpty(self):
+        return len(self._heap) == 0
 
     def __len__(self):
         return len(self._heap)
