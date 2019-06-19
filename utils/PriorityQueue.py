@@ -1,7 +1,9 @@
 class PriorityQueue:
     def __init__(self, arr=list()):
         self._heap = arr
-        self.heapify(self._heap, len(self._heap))
+        n = len(self._heap)
+        for i in range(n, -1, -1):
+            self.heapify(self._heap, n, i)
 
     def heapify(self, arr: list, n: int, i: int=0):
         """Heapifies given array arr, length n, and index i."""
@@ -87,7 +89,7 @@ class PriorityQueue:
                 else:
                     break
             else:
-                if self._heap[leftChildIndex] > self._heap[i]:
+                if self._heap[leftChildIndex] < self._heap[i]:
                     self._heap[leftChildIndex], self._heap[i] = self._heap[i], self._heap[leftChildIndex]
                     i = leftChildIndex
                 else:
@@ -109,3 +111,8 @@ if __name__ == '__main__':
     print(pq)
     print(pq.poll())
     print(pq)
+
+    print("###############")
+    pq2 = PriorityQueue([24, 31, 77])
+    pq2.poll()
+    print(pq2)

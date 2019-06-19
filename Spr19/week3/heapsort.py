@@ -12,6 +12,7 @@ class Solution:
         print("heap:", pq._heap)
         res = list()
         while not pq.isEmpty():
+            print(pq)
             res.append(pq.poll())
         return res
 
